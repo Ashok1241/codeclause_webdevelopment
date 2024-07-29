@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d5e9a4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    height: calc(100vh - 40px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.home button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.quiz {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #007bff;
+    width: 0%;
+    transition: width 0.3s;
+    border-radius: 10px;
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.question-number {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #666;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-buttons button {
+    font-size: 18px;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.answer-buttons button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.answer-buttons button.correct {
+    background-color: #28a745 !important;
+    color: #ffffff;
+    animation: correctAnswer 1s ease-in-out;
+}
+
+@keyframes correctAnswer {
+    from {
+        background-color: #28a745;
+        transform: scale(1.1);
+    }
+    to {
+        background-color: #28a745;
+        transform: scale(1);
+    }
+}
+
+.answer-buttons button.wrong {
+    background-color: #dc3545 !important;
+    color: #ffffff;
+    animation: wrongAnswer 1s ease-in-out;
+}
+
+@keyframes wrongAnswer {
+    from {
+        background-color: #dc3545;
+        transform: scale(1.1);
+    }
+    to {
+        background-color: #dc3545;
+        transform: scale(1);
+    }
+}
+
+/* Next button styling */
+#nextBtn {
+    font-size: 20px;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#nextBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Score screen styling */
+.score {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.score h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.score button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.score button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
